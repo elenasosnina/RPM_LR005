@@ -7,23 +7,4 @@ using System.Threading.Tasks;
 
 internal class ClassCreator
 {
-    public static Auditory Auditory()
-    {
-        Console.Write("Введите название: ");
-        string name = Console.ReadLine() ?? "";
-        Console.Write("Введите кол-во посадочных мест: ");
-        int mest = Convert.ToInt16(Console.ReadLine() ?? "");
-        Console.Write("Введите кол-во окон: ");
-        int window = Convert.ToInt16(Console.ReadLine() ?? "");
-        return new Auditory(name, Employee(), mest, window, Equipment());
-    }
-    public static Employee Employee()
-    {
-        return new Employee();
-    }
-
-    public static Equipment Equipment()
-    {
-        return new Equipment();
-    }
 }

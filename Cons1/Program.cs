@@ -7,9 +7,6 @@ while (true)
         Console.WriteLine("Какой класс Вы хотите создать?");
         switch (Console.ReadLine())
         {
-            case "Auditory":
-                UI.Print(ClassCreator.Auditory());
-                break;
             default:
                 Console.WriteLine("Такого класса не существует");
                 break;
