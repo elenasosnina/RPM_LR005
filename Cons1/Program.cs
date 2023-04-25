@@ -9,7 +9,10 @@ while (true)
         {
           case "Lesson":
                 UI.Print(ClassCreator.Lesson());
-                break;    
+                break;
+          case "Theme":
+                UI.Print(ClassCreator.Theme());
+                break;
 
             case "Group":
                 UI.Print(ClassCreator.Group());

@@ -26,6 +26,10 @@ internal static class UI
     {
         Console.WriteLine(auditory);
     }
+    public static void Print(Theme theme)
+    {
+        Console.WriteLine(theme);
+    }
 
     public static void Print(Group group)
     {
