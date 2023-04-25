@@ -9,6 +9,7 @@ while (true)
         {
             case "Student":
                 UI.Print(ClassCreator.Student());
+                break;
             default:
                 Console.WriteLine("Такого класса не существует");
                 break;
