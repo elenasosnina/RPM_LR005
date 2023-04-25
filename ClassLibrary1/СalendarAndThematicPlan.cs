@@ -23,7 +23,7 @@ namespace ClassLibrary1
         private readonly int? numberOfHours;
         public int? NumberOfHours { get => numberOfHours; } //количество часов
 
-        public СalendarAndThematicPlan(Materials materials, Paragraph paragraph, TypeLesson typeLesson, int lessonNumber, int numberOfHours)
+        public СalendarAndThematicPlan(int lessonNumber, int numberOfHours, Materials materials, Paragraph paragraph, TypeLesson typeLesson)
         {
             this.paragraph = paragraph;
             this.typeLesson = typeLesson;

@@ -8,7 +8,7 @@ while (true)
         switch (Console.ReadLine())
         {
             case "СalendarAndThematicPlan":
-                UI.Print(ClassCreator.СalendarAndThematicPlan());
+                UI.Print(ClassCreator.CalendarAndThematicPlan());
                 break;
             default:
                 Console.WriteLine("Такого класса не существует");

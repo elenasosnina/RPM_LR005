@@ -14,7 +14,7 @@ internal class ClassCreator
         Console.Write("Введите количество часов: ");
         int numberOfHours = Convert.ToInt32(Console.ReadLine() ?? "");
 
-        return new СalendarAndThematicPlan(lessonNumber, numberOfHours, Paragraph(), TypeLesson(), Materials());
+        return new СalendarAndThematicPlan(lessonNumber, numberOfHours, Materials(), Paragraph(), TypeLesson());
     }
 
 
