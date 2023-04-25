@@ -8,6 +8,23 @@ using System.Threading.Tasks;
 
 internal static class UI
 {
-
+    public static void Print(Group group)
+    {
+        Console.WriteLine("Group");
+        Console.WriteLine(group.Name);
+        Console.WriteLine(group.Sokr);
+        Console.WriteLine(group.Chisl);
+        Console.WriteLine(group.Year);
+        Print(group.Teacher);
+        Print(group.Speciality);
+    }
+    public static void Print(Speciality speciality)
+    {
+        Console.WriteLine(speciality);
+    }
+    public static void Print(Teacher teacher)
+    {
+        Console.WriteLine(teacher);
+    }
 }
 
