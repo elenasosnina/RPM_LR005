@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 internal class ClassCreator
 {
 
+
     public static Lesson Lesson()
     {
         return new Lesson(
@@ -46,5 +47,29 @@ internal class ClassCreator
     public static Pair Pair()
     {
         return new Pair();
+
+    public static Group Group()
+    {
+        Console.Write("Введите название группы: ");
+        string name = Console.ReadLine() ?? "";
+        Console.Write("Введите сокращённое название группы: ");
+        string sokr = Console.ReadLine() ?? "";
+        Console.Write("Введите численность группы: ");
+        int chisl = Convert.ToInt16(Console.ReadLine() ?? "25");
+        Console.Write("Введите год поступления группы: ");
+        int? year = Convert.ToInt32(Console.ReadLine());
+
+        return new Group(name, sokr, chisl, year, Speciality(), Teacher());
+
+    }
+    public static Teacher Teacher()
+    {
+        return new Teacher();
+    }
+
+    public static Speciality Speciality()
+    {
+        return new Speciality();
+
     }
 }
