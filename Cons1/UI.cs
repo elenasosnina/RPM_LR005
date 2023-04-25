@@ -13,7 +13,7 @@ internal static class UI
         Console.WriteLine("Group");
         Console.WriteLine(group.Name);
         Console.WriteLine(group.Sokr);
-        Console.WriteLine(group.Chisl);
+        Console.WriteLine(group.Population);
         Console.WriteLine(group.Year);
         Print(group.Teacher);
         Print(group.Speciality);
