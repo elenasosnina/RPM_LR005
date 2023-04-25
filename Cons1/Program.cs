@@ -9,25 +9,7 @@ while (true)
         {
             case "Lesson":
                 UI.Print(ClassCreator.Lesson());
-                break;
-            case "Auditory":
-                UI.Print(ClassCreator.Auditory());
-                break;
-            case "Group":
-                UI.Print(ClassCreator.Group());
-                break;
-            case "Employee":
-                UI.Print(ClassCreator.Employee());
-                break;
-            case "Discipline":
-                UI.Print(ClassCreator.Discipline());
-                break;
-            case "Pair":
-                UI.Print(ClassCreator.Pair());
-                break;
-            case "TypeLesson":
-                UI.Print(ClassCreator.TypeLesson());
-                break;
+                break;    
             default:
                 Console.WriteLine("Такого класса не существует");
                 break;
