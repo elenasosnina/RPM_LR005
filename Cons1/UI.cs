@@ -15,16 +15,16 @@ internal static class UI
         Console.WriteLine(group.Sokr);
         Console.WriteLine(group.Chisl);
         Console.WriteLine(group.Year);
-        Print(group.ClassTeacher);
+        Print(group.Teacher);
         Print(group.Speciality);
     }
     public static void Print(Speciality speciality)
     {
         Console.WriteLine(speciality);
     }
-    public static void Print(ClassTeacher classTeacher)
+    public static void Print(Teacher teacher)
     {
-        Console.WriteLine(classTeacher);
+        Console.WriteLine(teacher);
     }
 }
 

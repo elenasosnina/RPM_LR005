@@ -18,12 +18,12 @@ internal class ClassCreator
         Console.Write("Введите год поступления группы: ");
         int? year = Convert.ToInt32(Console.ReadLine());
 
-        return new Group(name, sokr, chisl, year, Speciality(), ClassTeacher());
+        return new Group(name, sokr, chisl, year, Speciality(), Teacher());
 
     }
-    public static ClassTeacher ClassTeacher()
+    public static Teacher Teacher()
     {
-        return new ClassTeacher();
+        return new Teacher();
     }
 
     public static Speciality Speciality()
