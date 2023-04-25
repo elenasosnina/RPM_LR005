@@ -1,4 +1,5 @@
-﻿namespace ClassLibrary1
+//https://docs.google.com/document/d/10XwtkjNB6-lRehWP_7qbgWC1nn_oIpa28ezyPXX3B28/edit - задание﻿
+namespace ClassLibrary1
 {
     public class Auditory
     {
