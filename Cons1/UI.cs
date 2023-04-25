@@ -62,7 +62,8 @@ internal static class UI
     }
     public static void Print(Speciality speciality)
     {
-        Console.WriteLine(speciality);
+        Console.WriteLine(speciality.title);
+        Console.WriteLine(speciality.reduction);
     }
     public static void Print(Teacher teacher)
     {

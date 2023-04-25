@@ -15,6 +15,10 @@ while (true)
                 UI.Print(ClassCreator.Group());
                 break;
 
+            case "Speciality":
+                UI.Print(ClassCreator.Speciality());
+                break;
+
             default:
                 Console.WriteLine("Такого класса не существует");
                 break;

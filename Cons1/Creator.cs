@@ -69,7 +69,11 @@ internal class ClassCreator
 
     public static Speciality Speciality()
     {
-        return new Speciality();
+         Console.Write("Введите название специальности: ");
+         string title = Console.ReadLine() ?? "";
+         Console.Write("Введите сокращенное название специальноти: ");
+         string reduction = Console.ReadLine() ?? "";
+         return new Speciality(title, reduction);
 
     }
 }
