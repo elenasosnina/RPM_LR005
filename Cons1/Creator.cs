@@ -55,11 +55,11 @@ internal class ClassCreator
         Console.Write("Введите сокращённое название группы: ");
         string sokr = Console.ReadLine() ?? "";
         Console.Write("Введите численность группы: ");
-        int chisl = Convert.ToInt16(Console.ReadLine() ?? "25");
+        byte population = Convert.ToByte(Console.ReadLine() ?? "25");
         Console.Write("Введите год поступления группы: ");
-        int? year = Convert.ToInt32(Console.ReadLine());
+        ushort year = Convert.ToUInt16(Console.ReadLine());
 
-        return new Group(name, sokr, chisl, year, Speciality(), Teacher());
+        return new Group(name, sokr, population, year, Speciality(), Teacher());
 
     }
     public static Teacher Teacher()
