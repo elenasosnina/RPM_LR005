@@ -32,6 +32,12 @@ internal static class UI
         Console.WriteLine(group);   
     }
 
+    public static void Print(Material material)
+    {
+        Console.WriteLine(name);
+        Console.WriteLine(creator);
+    }
+
     public static void Print(TypeLesson typeLesson)
     {
         Console.WriteLine(typeLesson);

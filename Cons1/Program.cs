@@ -15,6 +15,10 @@ while (true)
                 UI.Print(ClassCreator.Group());
                 break;
 
+            case "Material":
+                UI.Print(ClassCreator.Material());
+                break;
+
             default:
                 Console.WriteLine("Такого класса не существует");
                 break;
