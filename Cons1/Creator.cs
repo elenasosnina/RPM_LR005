@@ -12,9 +12,9 @@ internal class ClassCreator
         Console.Write("Введите название: ");
         string name = Console.ReadLine() ?? "";
         Console.Write("Введите кол-во посадочных мест: ");
-        int mest = Convert.ToInt16(Console.ReadLine() ?? "");
+        byte mest = Convert.ToByte(Console.ReadLine() ?? "");
         Console.Write("Введите кол-во окон: ");
-        int window = Convert.ToInt16(Console.ReadLine() ?? "");
+        byte window = Convert.ToByte(Console.ReadLine() ?? "");
         return new Auditory(name, Employee(), mest, window, Equipment());
     }
     public static Employee Employee()
