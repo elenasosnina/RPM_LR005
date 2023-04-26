@@ -27,10 +27,6 @@ internal static class UI
         Console.WriteLine(auditory);
     }
 
-    public static void Print(Group group)
-    {
-        Console.WriteLine(group);   
-    }
 
     public static void Print(TypeLesson typeLesson)
     {
