@@ -1,14 +1,16 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 //https://docs.google.com/document/d/10XwtkjNB6-lRehWP_7qbgWC1nn_oIpa28ezyPXX3B28/edit - задание﻿
+
 namespace ClassLibrary1
 {
     public class Auditory
     {
+
         public string Name { get; }   // название
 
         public Employee Employee { get; } // Ссылка на ответственного сотрудника
@@ -26,5 +28,6 @@ namespace ClassLibrary1
             Window = window;
             Equipment = equipment;
         }
+
     }
 }
