@@ -9,27 +9,22 @@ namespace ClassLibrary1
 {
     public class Auditory
     {
-        private readonly string name; // название
-        public string Name { get => name; }
+        public string Name { get; }   // название
 
-        private readonly Employee employee; // Ссылка на ответственного сотрудника
-        public Employee Employee { get => employee; }
+        public Employee Employee { get; } // Ссылка на ответственного сотрудника
 
-        private readonly byte mest; // кол-во посадочных мест
-        public byte Mest { get => mest; }
+        public byte Mest { get; }  // кол-во посадочных мест
 
-        private readonly byte window; // кол-во окон
-        public byte Window { get => window; }
+        public byte Window { get; }  // кол-во окон
 
-        private readonly Equipment equipment; // Ссылка на оборудование
-        public Equipment Equipment { get => equipment; }
+        public Equipment Equipment { get; } // Ссылка на оборудование
         public Auditory(string name, Employee employee, byte mest, byte window, Equipment equipment) // конструктор 
         {
-            this.name = name;
-            this.employee = employee;
-            this.mest = mest;
-            this.window = window;
-            this.equipment = equipment;
+            Name = name;
+            Employee = employee;
+            Mest = mest;
+            Window = window;
+            Equipment = equipment;
         }
     }
 }
