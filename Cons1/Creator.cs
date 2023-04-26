@@ -34,20 +34,17 @@ internal class ClassCreator
         return new Discipline();
     }
 
-    public static Group Group()
-    {
-        return new Group();
-    }
+    
     
     public static Employee Employee()
     {
         return new Employee();
     }
-    
+
     public static Pair Pair()
     {
         return new Pair();
-
+    }
     public static Group Group()
     {
         Console.Write("Введите название группы: ");
