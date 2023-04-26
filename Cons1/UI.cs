@@ -57,7 +57,7 @@ internal static class UI
         Console.WriteLine(group.Sokr);
         Console.WriteLine(group.Population);
         Console.WriteLine(group.Year);
-        Print(group.Teacher);
+        Print(group.ClassRoomTeacher);
         Print(group.Speciality);
     }
     public static void Print(Speciality speciality)
