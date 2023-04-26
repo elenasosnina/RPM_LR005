@@ -50,7 +50,7 @@ internal static class UI
     {
         Console.WriteLine("Group");
         Console.WriteLine(group.Name);
-        Console.WriteLine(group.Shortname);
+        Console.WriteLine(group.ShortName);
         Console.WriteLine(group.Population);
         Console.WriteLine(group.YearOfAdmission);
         Print(group.ClassRoomTeacher);

@@ -11,19 +11,19 @@ using System.Threading.Tasks;
     {
 
         public string Name { get; }
-        public string Shortname { get; }
+        public string ShortName { get; }
         public byte Population { get; }
         public ushort YearOfAdmission { get; }
         public Speciality Speciality { get; }
         public Teacher ClassRoomTeacher { get; }
 
 
-        public Group(string name, string shortname, byte population, ushort yearofadmission, Speciality speciality, Teacher teacher)
+        public Group(string name, string shortName, byte population, ushort yearOfAdmission, Speciality speciality, Teacher teacher)
         {
             Name = name;
-            Shortname = shortname;
+            ShortName = shortName;
             Population = population;
-            YearOfAdmission = yearofadmission;
+            YearOfAdmission = yearOfAdmission;
             Speciality = speciality;
             ClassRoomTeacher = teacher;
         }
