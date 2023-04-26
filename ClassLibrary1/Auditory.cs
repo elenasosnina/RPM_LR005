@@ -15,16 +15,16 @@ namespace ClassLibrary1
 
         public Employee Employee { get; } // Ссылка на ответственного сотрудника
 
-        public byte Mest { get; }  // кол-во посадочных мест
+        public byte Places { get; }  // кол-во посадочных мест
 
         public byte Window { get; }  // кол-во окон
 
         public Equipment Equipment { get; } // Ссылка на оборудование
-        public Auditory(string name, Employee employee, byte mest, byte window, Equipment equipment) // конструктор 
+        public Auditory(string name, Employee employee, byte places, byte window, Equipment equipment) // конструктор 
         {
             Name = name;
             Employee = employee;
-            Mest = mest;
+            Places = places;
             Window = window;
             Equipment = equipment;
         }

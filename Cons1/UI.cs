@@ -11,7 +11,7 @@ internal static class UI
     public static void Print(Auditory auditory)
     {
         Console.WriteLine(auditory.Name);
-        Console.WriteLine(auditory.Mest);
+        Console.WriteLine(auditory.Places);
         Console.WriteLine(auditory.Window);
         Print(auditory.Employee);
         Print(auditory.Equipment);
