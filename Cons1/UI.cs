@@ -27,11 +27,6 @@ internal static class UI
         Console.WriteLine(auditory);
     }
 
-    public static void Print(Group group)
-    {
-        Console.WriteLine(group);   
-    }
-
     public static void Print(TypeLesson typeLesson)
     {
         Console.WriteLine(typeLesson);
@@ -62,8 +57,8 @@ internal static class UI
     }
     public static void Print(Speciality speciality)
     {
-        Console.WriteLine(speciality.title);
-        Console.WriteLine(speciality.reduction);
+        Console.WriteLine(speciality.Name);
+        Console.WriteLine(speciality.Reduction);
     }
     public static void Print(Teacher teacher)
     {

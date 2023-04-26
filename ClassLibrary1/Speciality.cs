@@ -8,18 +8,13 @@ namespace ClassLibrary1
 {
     public class Speciality
     {
-        private readonly string? title; // название
+        public string Name { get; }
+        public string Reduction { get; }
 
-        public string? Title { get => title; }
-
-        private readonly string? reduction; // Сокращение
-
-        public string? Reduction { get => reduction; }
-
-        Speciality(string? title, string? reduction)
+        public Speciality(string name, string reduction)
         {
-            this.title = title;
-            this.reduction = reduction;
+            Name = name;
+            Reduction = reduction;
         }
     }
 }
