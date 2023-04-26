@@ -18,14 +18,14 @@ using System.Threading.Tasks;
         public Teacher ClassRoomTeacher { get; }
 
 
-        public Group(string name, string shortName, byte population, ushort yearOfAdmission, Speciality speciality, Teacher teacher)
+        public Group(string name, string shortName, byte population, ushort yearOfAdmission, Speciality speciality, Teacher classRoomTeacher)
         {
             Name = name;
             ShortName = shortName;
             Population = population;
             YearOfAdmission = yearOfAdmission;
             Speciality = speciality;
-            ClassRoomTeacher = teacher;
+            ClassRoomTeacher = classRoomTeacher;
         }
     }
 }
