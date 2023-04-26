@@ -3,31 +3,22 @@ namespace ClassLibrary1
 {
     public class Student
     {
-        private readonly string? name; // имя
-        public string? Name { get => name; }
+        public string Name { get; }
 
-        private readonly string? s_name; // фамилия
+        public string? Surname { get; }
 
-        public string? S_name { get => s_name; }
+        public string? Patronimyc { get; }
 
-        private readonly string? p_name; // отчество
+        public Group Group { get; }
 
-        public string? P_name { get => p_name; }
-
-        private readonly Group group;
-
-        public Group Group { get => group; }
-
-        private readonly DateTime date; // дата рождения
-
-        public DateTime? Date { get => date; }
-        public Student(string name, string s_name, string p_name, Group group, DateTime? date) // конструктор со всей фигней
+        public DateTime? Date { get; }
+        public Student(string name, string surname, string patronimyc, Group group, DateTime? date) // конструктор со всей фигней
         {
-            this.name = name;
-            this.s_name = s_name;
-            this.p_name = p_name;
-            this.group = group;
-            this.date = date ?? DateTime.Today;
+            Name = name;
+            Surname = surname;
+            Patronimyc = patronimyc;
+            Group = group;
+            Date = date ?? DateTime.Today;
         }
     }
 }

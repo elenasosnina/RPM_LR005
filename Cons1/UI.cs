@@ -11,8 +11,8 @@ internal static class UI
     public static void Print(Student student)
     {
         Console.WriteLine(student.Name);
-        Console.WriteLine(student.S_name);
-        Console.WriteLine(student.P_name);
+        Console.WriteLine(student.Surname);
+        Console.WriteLine(student.Patronimyc);
         Console.WriteLine(student.Date);
         Print(student.Group);
     }

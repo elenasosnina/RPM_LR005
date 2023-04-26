@@ -14,13 +14,13 @@ internal class ClassCreator
         Console.Write("Введите имя: ");
         string name = Console.ReadLine() ?? "";
         Console.Write("Введите фамилию: ");
-        string s_name = Console.ReadLine() ?? "";
+        string surname = Console.ReadLine() ?? "";
         Console.Write("Введите отчество: ");
-        string p_name = Console.ReadLine() ?? "";
-        Console.Write("Введите дату рождения: ");
+        string patronimyc = Console.ReadLine() ?? "";
+        Console.WriteLine("Введите дату рождения: ");
         DateTime date = CreateDateTime();
 
-        return new Student(name,s_name,p_name, Group(), date);
+        return new Student(name,surname, patronimyc, Group(), date);
     }
 
     static DateTime CreateDateTime()
