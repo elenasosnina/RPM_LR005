@@ -19,7 +19,7 @@
         public Speciality Speciality { get => speciality; }
 
         private readonly Teacher teacher;
-        public Teacher Teacher { get => teacher; }
+        public Teacher ClassRoomTeacher { get => teacher; }
 
 
         public Group(string name, string sokr, byte population, ushort year, Speciality speciality, Teacher teacher)
