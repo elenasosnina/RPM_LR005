@@ -63,7 +63,11 @@ internal class ClassCreator
 
     public static Discipline Discipline()
     {
-        return new Discipline();
+        Console.Write("Введите название дисциплины: "); 
+        string lname = Console.ReadLine() ?? "";
+        Console.Write("Введите сокращенное название дисциплины: "); 
+        string abbreviationn = Console.ReadLine() ?? "";
+        return new Discipline(lname, abbreviationn);
     }
 
     public static Employee Employee()

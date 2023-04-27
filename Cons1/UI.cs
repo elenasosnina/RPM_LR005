@@ -53,7 +53,9 @@ internal static class UI
     }
     public static void Print(Discipline discipline)
     {
-        Console.WriteLine(discipline);
+        Console.WriteLine("Discipline "); 
+        Console.WriteLine(discipline.Lname);
+        Console.WriteLine(discipline.Abbreviationn);
     }
 
     public static void Print(Pair pair)
