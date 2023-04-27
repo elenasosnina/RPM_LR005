@@ -8,7 +8,33 @@ using System.Threading.Tasks;
 
 internal static class UI
 {
+    public static void Print(Auditory auditory)
+    {
+        Console.WriteLine(auditory.Name);
+        Console.WriteLine(auditory.Places);
+        Console.WriteLine(auditory.Window);
+        Print(auditory.Employee);
+        Print(auditory.Equipment);
+    }
+    public static void Print(Employee employee)
+    {
+        Console.WriteLine(employee);
+    }
 
+    public static void Print(Student student)
+    {
+        Console.WriteLine(student.Name);
+        Console.WriteLine(student.Surname);
+        Console.WriteLine(student.Patronimyc);
+        Console.WriteLine(student.Date);
+        Print(student.Group);
+    }
+
+    public static void Print(Equipment equipment)
+    {
+        Console.WriteLine(equipment);
+    }
+    
     public static void Print(Lesson lesson)
     {
         Console.WriteLine("Lesson ");
@@ -19,17 +45,6 @@ internal static class UI
         Print(lesson.Auditory);
         Print(lesson.Group);
         Print(lesson.TypeLesson);
-    }
-
-
-    public static void Print(Auditory auditory)
-    {
-        Console.WriteLine(auditory);
-    }
-
-    public static void Print(Group group)
-    {
-        Console.WriteLine(group);   
     }
 
     public static void Print(Material material)
@@ -51,28 +66,24 @@ internal static class UI
     {
         Console.WriteLine(pair);
     }
-    public static void Print(Employee employee)
-    {
-        Console.WriteLine(employee);
-    }
-    
     public static void Print(Group group)
     {
         Console.WriteLine("Group");
         Console.WriteLine(group.Name);
-        Console.WriteLine(group.Sokr);
+        Console.WriteLine(group.ShortName);
         Console.WriteLine(group.Population);
-        Console.WriteLine(group.Year);
-        Print(group.Teacher);
+        Console.WriteLine(group.YearOfAdmission);
+        Print(group.ClassRoomTeacher);
         Print(group.Speciality);
     }
     public static void Print(Speciality speciality)
     {
-        Console.WriteLine(speciality);
+        Console.WriteLine(speciality.Name);
+        Console.WriteLine(speciality.Reduction);
     }
     public static void Print(Teacher teacher)
     {
         Console.WriteLine(teacher);
+
     }
 }
-

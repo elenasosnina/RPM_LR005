@@ -8,5 +8,13 @@ namespace ClassLibrary1
 {
     public class Speciality
     {
+        public string Name { get; }
+        public string Reduction { get; }
+
+        public Speciality(string name, string reduction)
+        {
+            Name = name;
+            Reduction = reduction;
+        }
     }
 }
