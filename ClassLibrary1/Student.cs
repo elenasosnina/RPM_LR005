@@ -5,13 +5,13 @@ namespace ClassLibrary1
     {
         public string Name { get; }
 
-        public string? Surname { get; }
+        public string Surname { get; }
 
-        public string? Patronimyc { get; }
+        public string Patronimyc { get; }
 
         public Group Group { get; }
 
-        public DateTime? Date { get; }
+        public DateTime Date { get; }
         public Student(string name, string surname, string patronimyc, Group group, DateTime? date) // конструктор со всей фигней
         {
             Name = name;
