@@ -80,4 +80,14 @@ internal static class UI
         Console.WriteLine(teacher);
 
     }
+    public static void Print(Paragraph paragraph)
+    {
+        Console.WriteLine("Paragraph");
+        Console.WriteLine(paragraph.Pname);
+        Print(paragraph.Theme);
+    }
+    public static void Print(Theme theme)
+    {
+        Console.WriteLine(theme);
+    }
 }

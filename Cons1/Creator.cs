@@ -31,7 +31,7 @@ internal class ClassCreator
         Console.WriteLine("Введите дату рождения: ");
         DateTime date = CreateDateTime();
 
-        return new Student(name,surname, patronimyc, Group(), date);
+        return new Student(name, surname, patronimyc, Group(), date);
     }
 
     static DateTime CreateDateTime()
@@ -87,31 +87,42 @@ internal class ClassCreator
 
     public static Group Group()
     {
-            Console.Write("Введите название группы: ");
-            string name = Console.ReadLine() ?? "";
-            Console.Write("Введите сокращённое название группы: ");
-            string sokr = Console.ReadLine() ?? "";
-            Console.Write("Введите численность группы: ");
-            byte population = Convert.ToByte(Console.ReadLine() ?? "25");
-            Console.Write("Введите год поступления группы: ");
-            ushort year = Convert.ToUInt16(Console.ReadLine());
+        Console.Write("Введите название группы: ");
+        string name = Console.ReadLine() ?? "";
+        Console.Write("Введите сокращённое название группы: ");
+        string sokr = Console.ReadLine() ?? "";
+        Console.Write("Введите численность группы: ");
+        byte population = Convert.ToByte(Console.ReadLine() ?? "25");
+        Console.Write("Введите год поступления группы: ");
+        ushort year = Convert.ToUInt16(Console.ReadLine());
 
-            return new Group(name, sokr, population, year, Speciality(), Teacher());
-
-    }
-        public static Teacher Teacher()
-        {
-            return new Teacher();
-        }
-
-        public static Speciality Speciality()
-        {
-            Console.Write("Введите название специальности: ");
-            string name = Console.ReadLine() ?? "";
-            Console.Write("Введите сокращенное название специальноти: ");
-            string reduction = Console.ReadLine() ?? "";
-            return new Speciality(name, reduction);
+        return new Group(name, sokr, population, year, Speciality(), Teacher());
 
     }
- } 
+    public static Teacher Teacher()
+    {
+        return new Teacher();
+    }
+
+    public static Speciality Speciality()
+    {
+        Console.Write("Введите название специальности: ");
+        string name = Console.ReadLine() ?? "";
+        Console.Write("Введите сокращенное название специальноти: ");
+        string reduction = Console.ReadLine() ?? "";
+        return new Speciality(name, reduction);
+
+    }
+    public static Paragraph Paragraph()
+    {
+        Console.Write("Введите название параграфа");
+        string pname = Console.ReadLine() ?? "";
+        return new Paragraph(pname, Theme());
+    }
+
+    public static Theme Theme()
+    {
+        return new Theme();
+    }
+}
 

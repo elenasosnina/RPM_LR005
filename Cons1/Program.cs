@@ -28,7 +28,9 @@ while (true)
             case "Speciality":
                 UI.Print(ClassCreator.Speciality());
                 break;
-
+            case "Paragraph":
+                UI.Print(ClassCreator.Paragraph());
+                break;
             default:
                 Console.WriteLine("Такого класса не существует");
                 break;
