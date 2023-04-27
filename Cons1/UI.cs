@@ -34,6 +34,7 @@ internal static class UI
     {
         Console.WriteLine(equipment);
     }
+    
     public static void Print(Lesson lesson)
     {
         Console.WriteLine("Lesson ");
@@ -45,7 +46,7 @@ internal static class UI
         Print(lesson.Group);
         Print(lesson.TypeLesson);
     }
-
+    
     public static void Print(TypeLesson typeLesson)
     {
         Console.WriteLine(typeLesson);
@@ -71,7 +72,8 @@ internal static class UI
     }
     public static void Print(Speciality speciality)
     {
-        Console.WriteLine(speciality);
+        Console.WriteLine(speciality.Name);
+        Console.WriteLine(speciality.Reduction);
     }
     public static void Print(Teacher teacher)
     {
@@ -79,5 +81,3 @@ internal static class UI
 
     }
 }
-
-
