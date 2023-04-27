@@ -10,21 +10,14 @@ namespace ClassLibrary1
 {
     public class Material
     {
-        private readonly string? name; // Имя
-        public string? Name { get => name; }
-
-        private readonly string? creator; // Автор
-
-        public string? Creator { get => creator; }
-
-        public static DateTime Now { get; } // Дата
-        private DateTime? date;
-        public DateTime? Date { get => date; }
-        Material(string? name, string? creator, DateTime? date)
+        
+        public string Name { get; }      
+        public string Creator { get; }
+        public Material(string name, string creator)
         {
-            this.name = name;
-            this.creator = creator;
-            this.date = date ?? DateTime.Today;
+            Name = name;
+            Creator = creator;
+            
         }
     }
 }

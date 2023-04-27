@@ -49,8 +49,8 @@ internal static class UI
 
     public static void Print(Material material)
     {
-        Console.WriteLine(name);
-        Console.WriteLine(creator);
+        Console.WriteLine(material.Name);
+        Console.WriteLine(material.Creator);
     }
 
     public static void Print(TypeLesson typeLesson)
