@@ -8,28 +8,24 @@ namespace ClassLibrary1
 {
     public class СalendarAndThematicPlan
     {
-        private readonly Paragraph paragraph;
-        public Paragraph Paragraph { get => paragraph; } //ссылка на параграф
+        
+        public Paragraph Paragraph { get; } //ссылка на параграф
 
-        private readonly TypeLesson typeLesson;
-        public TypeLesson TypeLesson { get => typeLesson; } //ссылка на вид занятия
+        public TypeLesson TypeLesson { get; } //ссылка на вид занятия
 
-        private readonly Materials materials;
-        public Materials Materials { get => materials; } //ссылка на материалы
+        public Materials Materials { get; } //ссылка на материалы
 
-        private readonly int? lessonNumber;
-        public int? LessonNumber { get => lessonNumber; } //номер занятия
-
-        private readonly int? numberOfHours;
-        public int? NumberOfHours { get => numberOfHours; } //количество часов
+        public int? LessonNumber { get; } //номер занятия
+        
+        public int? NumberOfHours { get; } //количество часов
 
         public СalendarAndThematicPlan(int lessonNumber, int numberOfHours, Materials materials, Paragraph paragraph, TypeLesson typeLesson)
         {
-            this.paragraph = paragraph;
-            this.typeLesson = typeLesson;
-            this.materials = materials;
-            this.lessonNumber = lessonNumber;
-            this.numberOfHours = numberOfHours;
+            Paragraph = paragraph;
+            TypeLesson = typeLesson;
+            Materials = materials;
+            LessonNumber = lessonNumber;
+            NumberOfHours = numberOfHours;
         }
     }
 }
