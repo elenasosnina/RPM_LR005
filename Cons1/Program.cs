@@ -11,13 +11,19 @@ while (true)
             case "Auditory":
                 UI.Print(ClassCreator.Auditory());
                 break;
-            case "Lesson":
+
+            case "Student":
+                UI.Print(ClassCreator.Student());
+                break;
+
+          case "Lesson":
                 UI.Print(ClassCreator.Lesson());
                 break;    
 
             case "Group":
                 UI.Print(ClassCreator.Group());
                 break;
+
 
             default:
                 Console.WriteLine("Такого класса не существует");
