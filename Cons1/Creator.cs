@@ -61,6 +61,15 @@ internal class ClassCreator
         return new TypeLesson();
     }
 
+    public static Material Material()
+    {
+        Console.Write("Введите название: ");
+        string name = Console.ReadLine() ?? "";
+        Console.Write("Введите автора: ");
+        string creator = Console.ReadLine() ?? "";
+        return new Material();
+    }
+
     public static Discipline Discipline()
     {
         return new Discipline();

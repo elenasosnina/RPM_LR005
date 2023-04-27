@@ -24,6 +24,9 @@ while (true)
                 UI.Print(ClassCreator.Group());
                 break;
 
+            case "Material":
+                UI.Print(ClassCreator.Material());
+                break;
 
             case "Speciality":
                 UI.Print(ClassCreator.Speciality());
