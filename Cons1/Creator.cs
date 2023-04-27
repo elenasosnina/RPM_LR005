@@ -67,7 +67,7 @@ internal class ClassCreator
         string name = Console.ReadLine() ?? "";
         Console.Write("Введите автора: ");
         string creator = Console.ReadLine() ?? "";
-        return new Material();
+        return new Material(name, creator);
     }
 
     public static Discipline Discipline()
