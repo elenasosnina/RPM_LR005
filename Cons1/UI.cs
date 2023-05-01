@@ -18,23 +18,17 @@ internal static class UI
         Print(lesson.Employee);
         Print(lesson.Auditory);
         Print(lesson.Group);
-        Print(lesson.TypeLesson);
+        Print(lesson.TypeOfLesson);
     }
-
 
     public static void Print(Auditory auditory)
     {
         Console.WriteLine(auditory);
     }
 
-    public static void Print(Group group)
+    public static void Print(TypeOfLesson typeOfLesson)
     {
-        Console.WriteLine(group);   
-    }
-
-    public static void Print(TypeLesson typeLesson)
-    {
-        Console.WriteLine(typeLesson);
+        Console.WriteLine(typeOfLesson);
     }
     public static void Print(Discipline discipline)
     {
@@ -49,15 +43,15 @@ internal static class UI
     {
         Console.WriteLine(employee);
     }
-    
+
     public static void Print(Group group)
     {
         Console.WriteLine("Group");
         Console.WriteLine(group.Name);
-        Console.WriteLine(group.Sokr);
-        Console.WriteLine(group.Chisl);
-        Console.WriteLine(group.Year);
-        Print(group.Teacher);
+        Console.WriteLine(group.ShortName);
+        Console.WriteLine(group.Population);
+        Console.WriteLine(group.YearOfAdmission);
+        Print(group.ClassRoomTeacher);
         Print(group.Speciality);
     }
     public static void Print(Speciality speciality)
