@@ -31,20 +31,19 @@ namespace ClassLibrary1
             this.shift = shift;
         }
 
-        //PairStruct(pairStart, pairEnd, breakStart, breakEnd, shift);
-        public struct PairStruct
-        {
-            private TimeOnly pairStart, pairEnd, breakStart, breakEnd;
-            private Shift shift;
+        //public struct PairStruct
+        //{
+        //    private TimeOnly pairStart, pairEnd, breakStart, breakEnd;
+        //    private Shift shift;
 
-            public PairStruct(TimeOnly pairS, TimeOnly pairE, TimeOnly breakS, TimeOnly breakE, Shift shift)
-            {
-                pairStart = pairS;
-                pairEnd = pairE;
-                breakStart = breakS;
-                breakEnd = breakE;
-                this.shift = shift;
-            }
-        }
+        //    public PairStruct(TimeOnly pairS, TimeOnly pairE, TimeOnly breakS, TimeOnly breakE, Shift shift)
+        //    {
+        //        pairStart = pairS;
+        //        pairEnd = pairE;
+        //        breakStart = breakS;
+        //        breakEnd = breakE;
+        //        this.shift = shift;
+        //    }
+        //}
     }
 }
