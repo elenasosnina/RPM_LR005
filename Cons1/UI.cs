@@ -34,7 +34,7 @@ internal static class UI
     {
         Console.WriteLine(equipment);
     }
-    
+
     public static void Print(Lesson lesson)
     {
         Console.WriteLine("Lesson ");
@@ -85,5 +85,17 @@ internal static class UI
     {
         Console.WriteLine(teacher);
 
+    }
+    public static void Print(Organization organization)
+    {
+        Console.WriteLine(organization);
+    }
+    public static void Print(Corpus corpus)
+    {
+        Console.WriteLine("Corpus");
+        Console.WriteLine(corpus.Title);
+        Console.WriteLine(corpus.Address);
+        Print(corpus.Commandant);
+        Print(corpus.Organization);
     }
 }

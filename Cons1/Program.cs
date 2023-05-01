@@ -32,6 +32,10 @@ while (true)
                 UI.Print(ClassCreator.Speciality());
                 break;
 
+            case "Corpus":
+                UI.Print(ClassCreator.Corpus());
+                break;
+
             default:
                 Console.WriteLine("Такого класса не существует");
                 break;
