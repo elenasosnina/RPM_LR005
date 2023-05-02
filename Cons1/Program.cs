@@ -1,4 +1,4 @@
-﻿using ClassLibrary1;
+using ClassLibrary1;
 
 while (true)
 {
@@ -8,19 +8,30 @@ while (true)
         switch (Console.ReadLine())
         {
 
+            case "Auditory":
+                UI.Print(ClassCreator.Auditory());
+                break;
             case "Student":
                 UI.Print(ClassCreator.Student());
                 break;
-
           case "Lesson":
                 UI.Print(ClassCreator.Lesson());
                 break;    
-
             case "Group":
                 UI.Print(ClassCreator.Group());
                 break;
-
-
+            case "Material":
+                UI.Print(ClassCreator.Material());
+                break;
+            case "Speciality":
+                UI.Print(ClassCreator.Speciality());
+                break;
+            case "Corpus":
+                UI.Print(ClassCreator.Corpus());
+                break;
+            case "Competence":
+                UI.Print(ClassCreator.Competence());
+                break;
             default:
                 Console.WriteLine("Такого класса не существует");
                 break;
