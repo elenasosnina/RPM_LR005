@@ -23,7 +23,6 @@ internal static class UI
         Console.WriteLine(student.Patronimyc);
         Console.WriteLine(student.DateOfBirth);
         Print(student.Group);
-        
     }
 
     public static void Print(Equipment equipment)
