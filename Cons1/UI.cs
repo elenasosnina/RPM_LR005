@@ -21,8 +21,9 @@ internal static class UI
         Console.WriteLine(student.Name);
         Console.WriteLine(student.Surname);
         Console.WriteLine(student.Patronimyc);
-        Console.WriteLine(student.Date);
+        Console.WriteLine(student.DateOfBirth);
         Print(student.Group);
+        
     }
 
     public static void Print(Equipment equipment)

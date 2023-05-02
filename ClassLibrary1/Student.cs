@@ -14,8 +14,6 @@ namespace ClassLibrary1
 
         public DateOnly DateOfBirth { get; }
         public Student(string name, string surname, string patronimyc, Group group, DateOnly dateOfBirth) // конструктор со всей фигней
-        public DateTime Date { get; }
-        public Student(string name, string surname, string patronimyc, Group group, DateTime? date) // конструктор со всей фигней
         {
             Name = name;
             Surname = surname;
