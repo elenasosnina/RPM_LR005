@@ -92,6 +92,6 @@ internal static class UI
     {
         Console.WriteLine(competence.code);
         Console.WriteLine(competence.content);
-        Print(competence.speciality);
+        Print(competence.Speciality);
     }
 }

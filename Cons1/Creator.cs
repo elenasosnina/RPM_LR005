@@ -129,7 +129,7 @@ internal class ClassCreator
     public static Competence Competence()
     {
         Console.WriteLine("Введите код: ");
-        int code = Convert.ToInt32(Console.ReadLine() ?? "");
+        string code = Console.ReadLine() ?? "";
         Console.WriteLine("Введите содержание: ");
         string content = Console.ReadLine() ?? "";
         return new Competence(code, content, Speciality());
