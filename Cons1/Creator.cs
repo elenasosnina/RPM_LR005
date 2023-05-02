@@ -122,13 +122,13 @@ internal class ClassCreator
     public static Pair Pair()
     {
         Console.WriteLine("Введите время начала пары: ");
-        string pairStart = Console.ReadLine() ?? "00:00:00";
+        string pairStart = Console.ReadLine() ?? "00.00.00";
         Console.WriteLine("Введите время окончания пары: ");
-        string pairEnd = Console.ReadLine() ?? "23:59:59";
+        string pairEnd = Console.ReadLine() ?? "23.59.59";
         Console.WriteLine("Введите время начала перерыва: ");
-        string breakStart = Console.ReadLine() ?? "00:00:00";
+        string breakStart = Console.ReadLine() ?? "00.00.00";
         Console.WriteLine("Введите время окончания перерыва ");
-        string breakEnd = Console.ReadLine() ?? "23:59:59";
+        string breakEnd = Console.ReadLine() ?? "23.59.59";
         return new Pair(pairStart, pairEnd, breakStart, breakEnd, Shift());
     }
     public static Organization Organization()
