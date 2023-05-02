@@ -20,7 +20,6 @@ internal class ClassCreator
     }
 
     public static Student Student()
-
     {
         Console.Write("Введите фамилию: ");
         string surname = Console.ReadLine() ?? "";
@@ -90,7 +89,6 @@ internal class ClassCreator
         
     }
 
-
     public static Teacher Teacher()
     {
         return new Teacher();
@@ -111,7 +109,7 @@ internal class ClassCreator
         string content = Console.ReadLine() ?? "";
         return new Competence(code, content, Speciality());
 
-        }
+    }
 
     public static Shift Shift()
     {
@@ -121,14 +119,15 @@ internal class ClassCreator
 
     public static Pair Pair()
     {
-        Console.WriteLine("Введите время начала пары: ");
-        string pairStart = Console.ReadLine() ?? "00:00:00";
-        Console.WriteLine("Введите время окончания пары: ");
-        string pairEnd = Console.ReadLine() ?? "23:59:59";
-        Console.WriteLine("Введите время начала перерыва: ");
-        string breakStart = Console.ReadLine() ?? "00:00:00";
-        Console.WriteLine("Введите время окончания перерыва: ");
-        string breakEnd = Console.ReadLine() ?? "23:59:59";
+        string input; 
+        Console.WriteLine("Введите время начала пары: "); input = Console.ReadLine() ?? "00:00:00";
+        TimeOnly pairStart = TimeOnly.Parse(input);
+        Console.WriteLine("Введите время окончания пары: "); input = Console.ReadLine() ?? "23:59:59";
+        TimeOnly pairEnd = TimeOnly.Parse(input);
+        Console.WriteLine("Введите время начала перерыва: "); input = Console.ReadLine() ?? "00:00:00";
+        TimeOnly breakStart = TimeOnly.Parse(input);
+        Console.WriteLine("Введите время окончания перерыва: "); input = Console.ReadLine() ?? "23:59:59";
+        TimeOnly breakEnd = TimeOnly.Parse(input);
         return new Pair(pairStart, pairEnd, breakStart, breakEnd, Shift());
     }
     public static Organization Organization()
