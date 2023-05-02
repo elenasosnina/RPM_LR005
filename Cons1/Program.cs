@@ -1,4 +1,4 @@
-﻿using ClassLibrary1;
+using ClassLibrary1;
 
 while (true)
 {
@@ -7,11 +7,24 @@ while (true)
         Console.WriteLine("Какой класс Вы хотите создать?");
         switch (Console.ReadLine())
         {
+
+            case "Auditory":
+                UI.Print(ClassCreator.Auditory());
+                break;
+            case "Student":
+                UI.Print(ClassCreator.Student());
+                break;
           case "Lesson":
                 UI.Print(ClassCreator.Lesson());
                 break;    
             case "Group":
                 UI.Print(ClassCreator.Group());
+                break;
+            case "Material":
+                UI.Print(ClassCreator.Material());
+                break;
+            case "Speciality":
+                UI.Print(ClassCreator.Speciality());
                 break;
             default:
                 Console.WriteLine("Такого класса не существует");
