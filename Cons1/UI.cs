@@ -86,4 +86,11 @@ internal static class UI
         Console.WriteLine(teacher);
 
     }
+    public static void Print(Extracurricular extracurricular)
+    {
+        Console.WriteLine("Extracurricular");
+        Console.WriteLine(extracurricular.Name);
+        Print(extracurricular.Employee);
+        Print(extracurricular.Student);
+    }
 }

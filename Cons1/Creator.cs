@@ -108,6 +108,17 @@ internal class ClassCreator
             return new Group(name, sokr, population, year, Speciality(), Teacher());
 
     }
+    public static Extracurricular Extracurricular()
+    {
+        Console.Write("Введите название внеурочки: ");
+        string Sname = Console.ReadLine() ?? "";
+        Console.Write("Введите фамилию руководителя: ");
+        string surname = Console.ReadLine() ?? "";
+        Console.Write("Введите имя руководителя: ");
+        string name = Console.ReadLine() ?? "";
+        Console.Write("Введите отчество руководителя: ");
+        string patronymic = Console.ReadLine() ?? "";
+    }
         public static Teacher Teacher()
         {
             return new Teacher();

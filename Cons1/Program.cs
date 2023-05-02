@@ -32,6 +32,10 @@ while (true)
                 UI.Print(ClassCreator.Speciality());
                 break;
 
+            case "Extracurricular":
+                UI.Print(ClassCreator.Extracurricular());
+                break;
+
             default:
                 Console.WriteLine("Такого класса не существует");
                 break;
