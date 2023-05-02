@@ -10,9 +10,9 @@ namespace ClassLibrary1
         public string Patronimyc { get; }
 
         public Group Group { get; }
-
-
+        
         public DateOnly DateOfBirth { get; }
+        
         public Student(string name, string surname, string patronimyc, Group group, DateOnly dateOfBirth) // конструктор со всей фигней
         {
             Name = name;
