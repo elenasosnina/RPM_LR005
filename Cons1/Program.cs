@@ -32,6 +32,10 @@ while (true)
                 UI.Print(ClassCreator.Speciality());
                 break;
 
+            case "Competence":
+                UI.Print(ClassCreator.Competence());
+                break;
+
             default:
                 Console.WriteLine("Такого класса не существует");
                 break;

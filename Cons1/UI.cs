@@ -86,4 +86,10 @@ internal static class UI
         Console.WriteLine(teacher);
 
     }
+    public static void Print(Competence competence)
+    {
+        Console.WriteLine(competence.code);
+        Console.WriteLine(competence.content);
+        Print(competence.speciality);
+    }
 }
