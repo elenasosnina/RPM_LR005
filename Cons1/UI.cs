@@ -1,4 +1,4 @@
-﻿using ClassLibrary1;
+using ClassLibrary1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +16,6 @@ internal static class UI
         Print(auditory.Employee);
         Print(auditory.Equipment);
     }
-    public static void Print(Employee employee)
-    {
-        Console.WriteLine(employee);
-    }
-
     public static void Print(Student student)
     {
         Console.WriteLine(student.Name);
@@ -44,18 +39,18 @@ internal static class UI
         Print(lesson.Employee);
         Print(lesson.Auditory);
         Print(lesson.Group);
-        Print(lesson.TypeLesson);
+        Print(lesson.TypeOfLesson);
     }
-
+    
     public static void Print(Material material)
     {
         Console.WriteLine(material.Name);
         Console.WriteLine(material.Creator);
     }
 
-    public static void Print(TypeLesson typeLesson)
+    public static void Print(TypeOfLesson typeOfLesson)
     {
-        Console.WriteLine(typeLesson);
+        Console.WriteLine(typeOfLesson);
     }
     public static void Print(Discipline discipline)
     {
@@ -66,6 +61,13 @@ internal static class UI
     {
         Console.WriteLine(pair);
     }
+
+    public static void Print(Employee employee)
+    {
+        Console.WriteLine(employee);
+    }
+
+
     public static void Print(Group group)
     {
         Console.WriteLine("Group");
@@ -86,6 +88,7 @@ internal static class UI
         Console.WriteLine(teacher);
 
     }
+
     public static void Print(Organization organization)
     {
         Console.WriteLine(organization);
@@ -98,4 +101,12 @@ internal static class UI
         Print(corpus.Commandant);
         Print(corpus.Organization);
     }
+
+    public static void Print(Competence competence)
+    {
+        Console.WriteLine(competence.code);
+        Console.WriteLine(competence.content);
+        Print(competence.speciality);
+    }
 }
+
