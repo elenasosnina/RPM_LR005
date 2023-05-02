@@ -19,12 +19,12 @@ namespace ClassLibrary1
         public TimeOnly BreakStart { get { return breakStart; } set => breakStart = value; }
         public TimeOnly BreakEnd { get { return breakEnd; } set => breakEnd = value; }
 
-        public Pair(string pairStart, string pairEnd, string breakStart, string breakEnd, Shift shift)
+        public Pair(TimeOnly pairStart, TimeOnly pairEnd, TimeOnly breakStart, TimeOnly breakEnd, Shift shift)
         {
-            this.pairStart = TimeOnly.Parse(pairStart);
-            this.pairEnd = TimeOnly.Parse(pairEnd);
-            this.breakStart = TimeOnly.Parse(breakStart);
-            this.breakEnd = TimeOnly.Parse(breakEnd);
+            this.pairStart = pairStart;
+            this.pairEnd = pairEnd;
+            this.breakStart = breakStart;
+            this.breakEnd = breakEnd;
             this.shift = shift;
         }
     }
