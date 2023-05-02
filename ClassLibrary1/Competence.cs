@@ -5,14 +5,13 @@ namespace ClassLibrary1;
 
 public class Competence
 {
-	public string code;
-	public string content;
-	private readonly Speciality speciality;
-	public Speciality Speciality { get => speciality; }
+	public string Code { get; }
+	public string Content { get; }
+	public Speciality Speciality { get; }
 	public Competence(string code, string content, Speciality speciality)
 	{
-		this.code = code;
-		this.content = content;
-		this.speciality = speciality;
+		this.Code = code;
+		this.Content = content;
+		this.Speciality = speciality;
 	}
 }

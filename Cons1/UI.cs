@@ -90,8 +90,8 @@ internal static class UI
     }
     public static void Print(Competence competence)
     {
-        Console.WriteLine(competence.code);
-        Console.WriteLine(competence.content);
+        Console.WriteLine(competence.Code);
+        Console.WriteLine(competence.Content);
         Print(competence.Speciality);
     }
 }
