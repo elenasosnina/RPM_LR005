@@ -26,6 +26,9 @@ while (true)
             case "Speciality":
                 UI.Print(ClassCreator.Speciality());
                 break;
+            case "Corpus":
+                UI.Print(ClassCreator.Corpus());
+                break;
             case "Competence":
                 UI.Print(ClassCreator.Competence());
                 break;
