@@ -1,4 +1,4 @@
-﻿using ClassLibrary1;
+using ClassLibrary1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +8,7 @@ using System.Xml.Linq;
 
 internal class ClassCreator
 {
+
 
     public static Auditory Auditory()
     {
@@ -45,20 +46,22 @@ internal class ClassCreator
 
         return new DateTime(year, month, day);
     }
+
     public static Lesson Lesson()
     {
         return new Lesson(
-            DateTime.Now,
+            DateOnly.FromDateTime(DateTime.Now),
             Pair(),
             Group(),
             Employee(),
-            TypeLesson(),
+            TypeOfLesson(),
             Discipline(),
             Auditory());
     }
-    public static TypeLesson TypeLesson()
+    public static TypeOfLesson TypeOfLesson()
+
     {
-        return new TypeLesson();
+        return new TypeOfLesson();
     }
 
     public static Material Material()
@@ -70,6 +73,7 @@ internal class ClassCreator
         return new Material(name, creator);
     }
 
+
     public static Discipline Discipline()
     {
         return new Discipline();
@@ -80,20 +84,16 @@ internal class ClassCreator
         return new Employee();
     }
 
-
-
     public static Equipment Equipment()
     {
         return new Equipment();
     }
 
+
     public static Pair Pair()
     {
         return new Pair();
     }
-
-
-
     public static Group Group()
     {
             Console.Write("Введите название группы: ");
@@ -106,12 +106,16 @@ internal class ClassCreator
             ushort year = Convert.ToUInt16(Console.ReadLine());
 
             return new Group(name, sokr, population, year, Speciality(), Teacher());
-
+        
     }
-        public static Teacher Teacher()
-        {
-            return new Teacher();
-        }
+
+    public static Teacher Teacher()
+    {
+        return new Teacher();
+    }
+
+        
+
 
         public static Speciality Speciality()
         {
