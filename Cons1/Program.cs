@@ -31,6 +31,9 @@ while (true)
             case "Speciality":
                 UI.Print(ClassCreator.Speciality());
                 break;
+            case "Pair":
+                UI.Print(ClassCreator.Pair());
+                break;
 
             default:
                 Console.WriteLine("Такого класса не существует");

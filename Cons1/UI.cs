@@ -64,8 +64,19 @@ internal static class UI
 
     public static void Print(Pair pair)
     {
-        Console.WriteLine(pair);
+        Console.WriteLine("Pair");
+        Console.WriteLine(pair.PairStart);
+        Console.WriteLine(pair.PairEnd);
+        Console.WriteLine(pair.BreakStart);
+        Console.WriteLine(pair.BreakEnd);
+        Print(pair.ShiftLink);
+
     }
+    public static void Print(Shift shift)
+    {
+        Console.WriteLine(shift);
+    }
+
     public static void Print(Group group)
     {
         Console.WriteLine("Group");

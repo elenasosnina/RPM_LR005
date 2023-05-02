@@ -87,13 +87,6 @@ internal class ClassCreator
         return new Equipment();
     }
 
-    public static Pair Pair()
-    {
-        return new Pair();
-    }
-
-
-
     public static Group Group()
     {
             Console.Write("Введите название группы: ");
@@ -121,6 +114,23 @@ internal class ClassCreator
             string reduction = Console.ReadLine() ?? "";
             return new Speciality(name, reduction);
 
-    }
- } 
+        }
 
+    public static Shift Shift()
+    {
+        return new Shift();
+    }
+
+    public static Pair Pair()
+    {
+        Console.WriteLine("Введите время начала пары: ");
+        string pairStart = Console.ReadLine() ?? "00.00.00";
+        Console.WriteLine("Введите время окончания пары: ");
+        string pairEnd = Console.ReadLine() ?? "23.59.59";
+        Console.WriteLine("Введите время начала перерыва: ");
+        string breakStart = Console.ReadLine() ?? "00.00.00";
+        Console.WriteLine("Введите время окончания перерыва ");
+        string breakEnd = Console.ReadLine() ?? "23.59.59";
+        return new Pair(pairStart, pairEnd, breakStart, breakEnd, Shift());
+    }
+}
