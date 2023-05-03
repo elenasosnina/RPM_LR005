@@ -12,20 +12,14 @@ namespace ClassLibrary1
      
         public string Title { get; }
         public string Address { get; }
-
-        private readonly Employee commandant;
-        private readonly Organization organization;
-        
-        public Employee Commandant { get => commandant; }
-
-  
-        public Organization Organization { get => organization; }
+        public Employee Commandant { get; }
+        public Organization Organization { get; }
         public Corpus(string title, string address, Employee commandant, Organization organization)
         {
             this.Title = title;
             this.Address = address;
-            this.organization = organization;
-            this.commandant = commandant;
+            this.Organization = organization;
+            this.Commandant = commandant;
         }
     }
 }
