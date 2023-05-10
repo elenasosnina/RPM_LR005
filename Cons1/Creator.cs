@@ -50,7 +50,6 @@ internal class ClassCreator
     public static Lesson Lesson()
     {
         return new Lesson(
-            DateOnly.FromDateTime(DateTime.Now),
             Pair(),
             Group(),
             Employee(),

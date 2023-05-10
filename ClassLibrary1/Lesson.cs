@@ -9,7 +9,7 @@ namespace ClassLibrary1
 {
     public class Lesson
     {
-        public DateOnly Data { get; }
+        public DateTime Data { get; }
         public Pair Pair { get; }
         public Employee Employee { get; }
         public TypeOfLesson TypeOfLesson { get; }
@@ -17,10 +17,9 @@ namespace ClassLibrary1
         public Discipline Discipline { get; }
         public Group Group { get; }
 
-        public Lesson(DateOnly? data, Pair pair, Group group, Employee employee,
-            TypeOfLesson typeOfLesson, Discipline discipline, Auditory auditory)
+        public Lesson(Pair pair, Group group, Employee employee,
+            TypeOfLesson typeOfLesson, Discipline discipline, Auditory auditory) : this(DateTime.Now)
         {
-            Data = data ?? DateOnly.FromDateTime(DateTime.Now);
             Pair = pair;
             Group = group;
             Employee = employee;
@@ -28,5 +27,6 @@ namespace ClassLibrary1
             Discipline = discipline;
             Auditory = auditory;
         }
+        public Lesson(DateTime data) => Data = data;
     }
 }
