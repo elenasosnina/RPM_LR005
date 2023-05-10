@@ -18,15 +18,20 @@ namespace ClassLibrary1
         public Group Group { get; }
 
         public Lesson(Pair pair, Group group, Employee employee,
-            TypeOfLesson typeOfLesson, Discipline discipline, Auditory auditory) : this(DateTime.Now)
+            TypeOfLesson typeOfLesson, Discipline discipline, Auditory auditory) : this(pair, group, employee,
+             typeOfLesson, discipline, auditory, DateTime.Now)
+        { }
+        public Lesson(Pair pair, Group group, Employee employee,
+            TypeOfLesson typeOfLesson, Discipline discipline, Auditory auditory,DateTime data) 
         {
+            Data = data;
             Pair = pair;
             Group = group;
             Employee = employee;
             TypeOfLesson = typeOfLesson;
             Discipline = discipline;
             Auditory = auditory;
+
         }
-        public Lesson(DateTime data) => Data = data;
     }
 }
