@@ -22,12 +22,6 @@ internal static class UI
     {
         Console.WriteLine(paragraph);
     }
-
-    public static void Print(Materials materials)
-    {
-        Console.WriteLine(materials);
-    }
-    
     public static void Print(Auditory auditory)
     {
         Console.WriteLine(auditory.Name);
