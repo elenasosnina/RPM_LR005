@@ -30,7 +30,7 @@ internal class ClassCreator
         string patronimyc = Console.ReadLine() ?? "";
         DateOnly dateOfBirth;
         Console.WriteLine("Введите дату рождения в формате дд.мм.гггг");
-        while (DateOnly.TryParse(Console.ReadLine(), out dateOfBirth)) ;
+        while (!DateOnly.TryParse(Console.ReadLine(), out dateOfBirth)) ;
         return new Student(name, surname, patronimyc, Group(), dateOfBirth);
     }
     public static Lesson Lesson()
