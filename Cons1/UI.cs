@@ -8,6 +8,20 @@ using System.Threading.Tasks;
 
 internal static class UI
 {
+
+    public static void Print(СalendarAndThematicPlan calendarAndThematicPlan)
+    {
+        Console.WriteLine("СalendarAndThematicPlan");
+        Console.WriteLine(calendarAndThematicPlan.LessonNumber);
+        Console.WriteLine(calendarAndThematicPlan.NumberOfHours);
+        Print(calendarAndThematicPlan.Paragraph);
+        Print(calendarAndThematicPlan.TypeOfLesson);
+        Print(calendarAndThematicPlan.Materials);
+    }
+    public static void Print(Paragraph paragraph)
+    {
+        Console.WriteLine(paragraph);
+    }
     public static void Print(Auditory auditory)
     {
         Console.WriteLine(auditory.Name);
@@ -37,11 +51,12 @@ internal static class UI
         Print(lesson.Pair);
         Print(lesson.Discipline);
         Print(lesson.Employee);
+        Print(lesson.TypeOfLesson);
         Print(lesson.Auditory);
         Print(lesson.Group);
-        Print(lesson.TypeOfLesson);
+        
     }
-    
+
     public static void Print(Material material)
     {
         Console.WriteLine(material.Name);
@@ -73,15 +88,10 @@ internal static class UI
     {
         Console.WriteLine(shift);
     }
-
-
     public static void Print(Employee employee)
     {
         Console.WriteLine(employee);
     }
-
-
-
     public static void Print(Group group)
     {
         Console.WriteLine("Group");
@@ -100,7 +110,6 @@ internal static class UI
     public static void Print(Teacher teacher)
     {
         Console.WriteLine(teacher);
-
     }
 
     public static void Print(Organization organization)
@@ -122,5 +131,6 @@ internal static class UI
         Console.WriteLine(competence.Content);
         Print(competence.Speciality);
     }
+
 }
 

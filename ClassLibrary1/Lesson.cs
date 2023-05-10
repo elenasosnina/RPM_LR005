@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ClassLibrary1
 {
     public class Lesson
-    {
+    {   
         public DateOnly Data { get; }
         public Pair Pair { get; }
         public Employee Employee { get; }

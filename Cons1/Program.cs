@@ -8,6 +8,9 @@ while (true)
         switch (Console.ReadLine())
         {
 
+            case "СalendarAndThematicPlan":
+                UI.Print(ClassCreator.CalendarAndThematicPlan());
+                break;
             case "Auditory":
                 UI.Print(ClassCreator.Auditory());
                 break;

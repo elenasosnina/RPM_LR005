@@ -8,6 +8,15 @@ using System.Xml.Linq;
 
 internal class ClassCreator
 {
+    public static СalendarAndThematicPlan CalendarAndThematicPlan()
+    {
+        Console.Write("Введите номер занятия: ");
+        int lessonNumber = Convert.ToInt32(Console.ReadLine() ?? "");
+        Console.Write("Введите количество часов: ");
+        int numberOfHours = Convert.ToInt32(Console.ReadLine() ?? "");
+
+        return new СalendarAndThematicPlan(lessonNumber, numberOfHours, Materials(), Paragraph(), TypeOfLesson());
+    }
     public static Auditory Auditory()
     {
         Console.Write("Введите название: ");
@@ -41,10 +50,15 @@ internal class ClassCreator
             Employee(),
             TypeOfLesson(),
             Discipline(),
-            Auditory());
-    }
-    public static TypeOfLesson TypeOfLesson()
+            Auditory();
+     }
 
+    public static Paragraph Paragraph()
+    {
+        return new Paragraph();
+    }
+    
+          public static TypeOfLesson TypeOfLesson()
     {
         return new TypeOfLesson();
     }
@@ -93,18 +107,6 @@ internal class ClassCreator
         
     }
 
-    public static Teacher Teacher()
-    {
-        return new Teacher();
-    }
-    public static Speciality Speciality()
-    {
-        Console.Write("Введите название специальности: ");
-        string name = Console.ReadLine() ?? "";
-        Console.Write("Введите сокращенное название специальноти: ");
-        string reduction = Console.ReadLine() ?? "";
-        return new Speciality(name, reduction);
-    }
     public static Competence Competence()
     {
         Console.WriteLine("Введите код: ");
@@ -119,8 +121,19 @@ internal class ClassCreator
     {
         return new Shift();
     }
+    public static Teacher Teacher()
+    {
+        return new Teacher();
+    }
 
-
+    public static Speciality Speciality()
+    {
+        Console.Write("Введите название специальности: ");
+        string name = Console.ReadLine() ?? "";
+        Console.Write("Введите сокращенное название специальноти: ");
+        string reduction = Console.ReadLine() ?? "";
+        return new Speciality(name, reduction);
+    }
     public static Pair Pair()
     {
         TimeOnly pairStart, pairEnd, breakStart, breakEnd;
@@ -170,6 +183,5 @@ internal class ClassCreator
         Console.Write("Введите адрес: ");
         string address = Console.ReadLine() ?? "";
         return new Corpus(name, address, Employee(), Organization());
-
     }
 }
