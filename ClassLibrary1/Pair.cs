@@ -22,7 +22,7 @@ namespace ClassLibrary1
             PairEnd = pairEnd;
             BreakStart = breakStart;
             BreakEnd = breakEnd;
-            this.ShiftLink = shift;
+            ShiftLink = shift;
         }
     }
 }
