@@ -16,13 +16,13 @@ namespace ClassLibrary1
         public TimeOnly BreakStart { get; }
         public TimeOnly BreakEnd { get; }
 
-        public Pair(TimeOnly pairStart, TimeOnly pairEnd, TimeOnly breakStart, TimeOnly breakEnd, Shift shift)
+        public Pair(TimeOnly pairStart, TimeOnly pairEnd, TimeOnly breakStart, TimeOnly breakEnd, Shift shiftLink)
         {
             PairStart = pairStart;
             PairEnd = pairEnd;
             BreakStart = breakStart;
             BreakEnd = breakEnd;
-            ShiftLink = shift;
+            ShiftLink = shiftLink;
         }
     }
 }
