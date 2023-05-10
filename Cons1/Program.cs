@@ -20,8 +20,12 @@ while (true)
             case "Group":
                 UI.Print(ClassCreator.Group());
                 break;
+            case "Discipline":
+                UI.Print(ClassCreator.Discipline());
+
             case "Material":
                 UI.Print(ClassCreator.Material());
+
                 break;
             case "Speciality":
                 UI.Print(ClassCreator.Speciality());
