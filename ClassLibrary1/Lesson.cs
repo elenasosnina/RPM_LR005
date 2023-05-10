@@ -13,8 +13,8 @@ namespace ClassLibrary1
         private readonly Employee employee;
         public Employee Employee { get => employee; }//ссылка на сотрудника(Журавлев В.)
 
-        private readonly TypeLesson typeLesson;
-        public TypeLesson TypeLesson { get => typeLesson; }//ссылка на вид занятия(Ковалев. А)
+        private readonly TypeOfLesson typeOfLesson;
+        public TypeOfLesson TypeOfLesson { get => typeOfLesson; }//ссылка на вид занятия(Ковалев. А)
 
         private readonly Auditory auditory;
         public Auditory Auditory { get => auditory; }//ссылка на аудиторию (Рощин Э.)
@@ -27,13 +27,13 @@ namespace ClassLibrary1
 
 
         public Lesson(DateTime? data, Pair pair, Group group, Employee employee,
-            TypeLesson typeLesson, Discipline discipline, Auditory auditory)
+            TypeOfLesson typeOfLesson, Discipline discipline, Auditory auditory)
         {
             this.data = data ?? DateTime.Now;
             this.pair = pair;
             this.group = group;
             this.employee = employee;
-            this.typeLesson = typeLesson;
+            this.typeOfLesson = typeOfLesson;
             this.discipline = discipline;
             this.auditory = auditory;
         }

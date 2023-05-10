@@ -15,7 +15,7 @@ internal static class UI
         Console.WriteLine(calendarAndThematicPlan.LessonNumber);
         Console.WriteLine(calendarAndThematicPlan.NumberOfHours);
         Print(calendarAndThematicPlan.Paragraph);
-        Print(calendarAndThematicPlan.TypeLesson);
+        Print(calendarAndThematicPlan.TypeOfLesson);
         Print(calendarAndThematicPlan.Materials);
     }
     public static void Print(Paragraph paragraph)
@@ -23,20 +23,11 @@ internal static class UI
         Console.WriteLine(paragraph);
     }
 
-    public static void Print(TypeLesson typeLesson)
-    {
-        Console.WriteLine(typeLesson);
-    }
-
     public static void Print(Materials materials)
     {
         Console.WriteLine(materials);
     }
     
-}
-
-
-
     public static void Print(Auditory auditory)
     {
         Console.WriteLine(auditory.Name);
@@ -71,14 +62,14 @@ internal static class UI
         Print(lesson.Pair);
         Print(lesson.Discipline);
         Print(lesson.Employee);
+        Print(lesson.TypeOfLesson);
         Print(lesson.Auditory);
         Print(lesson.Group);
-        Print(lesson.TypeLesson);
+        
     }
-    
-    public static void Print(TypeLesson typeLesson)
+    public static void Print(TypeOfLesson typeOfLesson)
     {
-        Console.WriteLine(typeLesson);
+        Console.WriteLine(typeOfLesson);
     }
     public static void Print(Discipline discipline)
     {
@@ -107,7 +98,6 @@ internal static class UI
     public static void Print(Teacher teacher)
     {
         Console.WriteLine(teacher);
-
     }
 }
 

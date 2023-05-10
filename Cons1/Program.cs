@@ -23,12 +23,9 @@ while (true)
           case "Lesson":
                 UI.Print(ClassCreator.Lesson());
                 break;    
-
             case "Group":
                 UI.Print(ClassCreator.Group());
                 break;
-
-
             case "Speciality":
                 UI.Print(ClassCreator.Speciality());
                 break;

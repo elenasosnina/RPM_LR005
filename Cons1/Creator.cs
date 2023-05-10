@@ -16,7 +16,7 @@ internal class ClassCreator
         Console.Write("Введите количество часов: ");
         int numberOfHours = Convert.ToInt32(Console.ReadLine() ?? "");
 
-        return new СalendarAndThematicPlan(lessonNumber, numberOfHours, Materials(), Paragraph(), TypeLesson());
+        return new СalendarAndThematicPlan(lessonNumber, numberOfHours, Materials(), Paragraph(), TypeOfLesson());
     }
     public static Auditory Auditory()
     {
@@ -61,14 +61,14 @@ internal class ClassCreator
             Pair(),
             Group(),
             Employee(),
-            TypeLesson(),
+            TypeOfLesson(),
             Discipline(),
             Auditory());
     }
 
-    public static TypeLesson TypeLesson()
+    public static TypeOfLesson TypeOfLesson()
     {
-        return new TypeLesson();
+        return new TypeOfLesson();
     }
     public static Materials Materials()
     {
@@ -80,7 +80,7 @@ internal class ClassCreator
         return new Paragraph();
     }
 
-}
+
     public static Discipline Discipline()
     {
         return new Discipline();
@@ -114,19 +114,18 @@ internal class ClassCreator
             return new Group(name, sokr, population, year, Speciality(), Teacher());
 
     }
-        public static Teacher Teacher()
-        {
-            return new Teacher();
-        }
+    public static Teacher Teacher()
+    {
+        return new Teacher();
+    }
 
-        public static Speciality Speciality()
-        {
-            Console.Write("Введите название специальности: ");
-            string name = Console.ReadLine() ?? "";
-            Console.Write("Введите сокращенное название специальноти: ");
-            string reduction = Console.ReadLine() ?? "";
-            return new Speciality(name, reduction);
-
+    public static Speciality Speciality()
+    {
+        Console.Write("Введите название специальности: ");
+        string name = Console.ReadLine() ?? "";
+        Console.Write("Введите сокращенное название специальноти: ");
+        string reduction = Console.ReadLine() ?? "";
+        return new Speciality(name, reduction);
     }
  } 
 

@@ -10,19 +10,15 @@ namespace ClassLibrary1
     {
         
         public Paragraph Paragraph { get; } //ссылка на параграф
-
-        public TypeLesson TypeLesson { get; } //ссылка на вид занятия
-
+        public TypeOfLesson TypeOfLesson { get; } //ссылка на вид занятия
         public Materials Materials { get; } //ссылка на материалы
-
         public int? LessonNumber { get; } //номер занятия
-        
         public int? NumberOfHours { get; } //количество часов
 
-        public СalendarAndThematicPlan(int lessonNumber, int numberOfHours, Materials materials, Paragraph paragraph, TypeLesson typeLesson)
+        public СalendarAndThematicPlan(int lessonNumber, int numberOfHours, Materials materials, Paragraph paragraph, TypeOfLesson typeOfLesson)
         {
             Paragraph = paragraph;
-            TypeLesson = typeLesson;
+            TypeOfLesson = typeOfLesson;
             Materials = materials;
             LessonNumber = lessonNumber;
             NumberOfHours = numberOfHours;
