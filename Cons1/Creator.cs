@@ -119,15 +119,40 @@ internal class ClassCreator
 
     public static Pair Pair()
     {
-        string input; 
-        Console.WriteLine("Введите время начала пары: "); input = Console.ReadLine() ?? "00:00:00";
-        TimeOnly pairStart = TimeOnly.Parse(input);
-        Console.WriteLine("Введите время окончания пары: "); input = Console.ReadLine() ?? "23:59:59";
-        TimeOnly pairEnd = TimeOnly.Parse(input);
-        Console.WriteLine("Введите время начала перерыва: "); input = Console.ReadLine() ?? "00:00:00";
-        TimeOnly breakStart = TimeOnly.Parse(input);
-        Console.WriteLine("Введите время окончания перерыва: "); input = Console.ReadLine() ?? "23:59:59";
-        TimeOnly breakEnd = TimeOnly.Parse(input);
+        TimeOnly pairStart, pairEnd, breakStart, breakEnd;
+
+        Console.WriteLine("Введите время начала пары: "); string input = Console.ReadLine() ?? "";
+        if (input != "") pairStart = TimeOnly.Parse(input);
+        else
+        {
+            while (input == "") { Console.WriteLine("Введите время начала пары: "); input = Console.ReadLine() ?? ""; }
+            pairStart = TimeOnly.Parse(input);
+        }
+        
+        Console.WriteLine("Введите время окончания пары: "); input = Console.ReadLine() ?? "";
+        if (input != "") pairEnd = TimeOnly.Parse(input);
+        else
+        {
+            while (input == "") { Console.WriteLine("Введите время окончания пары: "); input = Console.ReadLine() ?? ""; }
+            pairEnd = TimeOnly.Parse(input);
+        }
+
+        Console.WriteLine("Введите время начала перерыва: "); input = Console.ReadLine() ?? "";
+        if (input != "") breakStart = TimeOnly.Parse(input);
+        else
+        {
+            while (input == "") { Console.WriteLine("Введите время начала перерыва: "); input = Console.ReadLine() ?? ""; }
+            breakStart = TimeOnly.Parse(input);
+        }
+
+        Console.WriteLine("Введите время окончания перерыва: "); input = Console.ReadLine() ?? "";
+        if (input != "") breakEnd = TimeOnly.Parse(input);
+        else
+        {
+            while (input == "") { Console.WriteLine("Введите время окончания перерыва: "); input = Console.ReadLine() ?? ""; }
+            breakEnd = TimeOnly.Parse(input);
+        }
+        
         return new Pair(pairStart, pairEnd, breakStart, breakEnd, Shift());
     }
     public static Organization Organization()
