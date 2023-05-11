@@ -14,10 +14,10 @@ internal class ClassCreator
         Console.Write("Введите название: ");
         string name = Console.ReadLine() ?? "";
         Console.Write("Введите кол-во посадочных мест: ");
-        byte mest = Convert.ToByte(Console.ReadLine() ?? "");
+        byte places = Convert.ToByte(Console.ReadLine() ?? "");
         Console.Write("Введите кол-во окон: ");
         byte window = Convert.ToByte(Console.ReadLine() ?? "");
-        return new Auditory(name, Employee(), mest, window, Equipment());
+        return new Auditory(name, Employee(), places, window, Equipment());
     }
 
     public static Student Student()
@@ -72,9 +72,9 @@ internal class ClassCreator
     }
 
 
-    public static Equipment Equipment()
+    public static List<Equipment> Equipment()
     {
-        return new Equipment();
+        return new List<Equipment>();
     }
     public static Pair Pair()
     {

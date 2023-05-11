@@ -19,8 +19,8 @@ namespace ClassLibrary1
 
         public byte Window { get; }  // кол-во окон
 
-        public Equipment Equipment { get; } // Ссылка на оборудование
-        public Auditory(string name, Employee employee, byte places, byte window, Equipment equipment) // конструктор 
+        public List<Equipment> Equipment { get; } // Ссылка на оборудование
+        public Auditory(string name, Employee employee, byte places, byte window, List<Equipment> equipment) // конструктор 
         {
             Name = name;
             Employee = employee;

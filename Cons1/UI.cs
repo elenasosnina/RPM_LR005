@@ -30,7 +30,7 @@ internal static class UI
         Print(student.Group);
     }
 
-    public static void Print(Equipment equipment)
+    public static void Print(List<Equipment> equipment)
     {
         Console.WriteLine(equipment);
     }
