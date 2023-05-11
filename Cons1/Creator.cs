@@ -44,21 +44,20 @@ internal class ClassCreator
     public static Lesson Lesson()
     {
         return new Lesson(
-            DateOnly.FromDateTime(DateTime.Now),
             Pair(),
             Group(),
             Employee(),
             TypeOfLesson(),
             Discipline(),
-            Auditory());
-     }
-
+            Auditory(),
+            DateTime.Now);
+    }
     public static Paragraph Paragraph()
     {
         return new Paragraph();
     }
     
-          public static TypeOfLesson TypeOfLesson()
+    public static TypeOfLesson TypeOfLesson()
     {
         return new TypeOfLesson();
     }

@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 namespace ClassLibrary1
 {
     public class Lesson
-    {   
-        public DateOnly Data { get; }
+
+    {
+        public DateTime Data { get; }
         public Pair Pair { get; }
         public Employee Employee { get; }
         public TypeOfLesson TypeOfLesson { get; }
@@ -17,16 +18,21 @@ namespace ClassLibrary1
         public Discipline Discipline { get; }
         public Group Group { get; }
 
-        public Lesson(DateOnly? data, Pair pair, Group group, Employee employee,
-            TypeOfLesson typeOfLesson, Discipline discipline, Auditory auditory)
+        public Lesson(Pair pair, Group group, Employee employee,
+            TypeOfLesson typeOfLesson, Discipline discipline, Auditory auditory) : this(pair, group, employee,
+             typeOfLesson, discipline, auditory, DateTime.Now)
+        { }
+        public Lesson(Pair pair, Group group, Employee employee,
+            TypeOfLesson typeOfLesson, Discipline discipline, Auditory auditory,DateTime data) 
         {
-            Data = data ?? DateOnly.FromDateTime(DateTime.Now);
+            Data = data;
             Pair = pair;
             Group = group;
             Employee = employee;
             TypeOfLesson = typeOfLesson;
             Discipline = discipline;
             Auditory = auditory;
+
         }
     }
 }
