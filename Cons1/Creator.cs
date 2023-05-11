@@ -55,7 +55,8 @@ internal class ClassCreator
             Employee(),
             TypeOfLesson(),
             Discipline(),
-            Auditory());
+            Auditory(),
+            DateTime.Now);
     }
     public static TypeOfLesson TypeOfLesson()
 
