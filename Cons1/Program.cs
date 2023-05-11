@@ -22,7 +22,7 @@ while (true)
                 break;
             case "Discipline":
                 UI.Print(ClassCreator.Discipline());
-
+                break;
             case "Material":
                 UI.Print(ClassCreator.Material());
 
