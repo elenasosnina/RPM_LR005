@@ -11,9 +11,11 @@ namespace ClassLibrary1
 
         public Group Group { get; }
         
-        public DateOnly DateOfBirth { get; }
+        public DateTime DateOfBirth { get; }
         
-        public Student(string name, string surname, string patronimyc, Group group, DateOnly dateOfBirth) // конструктор со всей фигней
+        public Student(string name, string surname, string patronimyc, Group group) : this(name, surname, patronimyc, group, DateTime.Now)
+        { }
+        public Student(string name, string surname, string patronimyc, Group group, DateTime dateOfBirth) // конструктор со всей фигней
         {
             Name = name;
             Surname = surname;
