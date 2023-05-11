@@ -8,6 +8,20 @@ using System.Threading.Tasks;
 
 internal static class UI
 {
+
+    public static void Print(СalendarAndThematicPlan calendarAndThematicPlan)
+    {
+        Console.WriteLine("СalendarAndThematicPlan");
+        Console.WriteLine(calendarAndThematicPlan.LessonNumber);
+        Console.WriteLine(calendarAndThematicPlan.NumberOfHours);
+        Print(calendarAndThematicPlan.Paragraph);
+        Print(calendarAndThematicPlan.TypeOfLesson);
+        Print(calendarAndThematicPlan.Materials);
+    }
+    public static void Print(Paragraph paragraph)
+    {
+        Console.WriteLine(paragraph);
+    }
     public static void Print(Auditory auditory)
     {
         Console.WriteLine(auditory.Name);
@@ -21,7 +35,7 @@ internal static class UI
         Console.WriteLine(student.Name);
         Console.WriteLine(student.Surname);
         Console.WriteLine(student.Patronimyc);
-        Console.WriteLine(student.Date);
+        Console.WriteLine(student.DateOfBirth);
         Print(student.Group);
     }
 
@@ -29,7 +43,7 @@ internal static class UI
     {
         Console.WriteLine(equipment);
     }
-    
+
     public static void Print(Lesson lesson)
     {
         Console.WriteLine("Lesson ");
@@ -37,11 +51,12 @@ internal static class UI
         Print(lesson.Pair);
         Print(lesson.Discipline);
         Print(lesson.Employee);
+        Print(lesson.TypeOfLesson);
         Print(lesson.Auditory);
         Print(lesson.Group);
-        Print(lesson.TypeOfLesson);
+        
     }
-    
+
     public static void Print(Material material)
     {
         Console.WriteLine(material.Name);
@@ -54,20 +69,29 @@ internal static class UI
     }
     public static void Print(Discipline discipline)
     {
-        Console.WriteLine(discipline);
+        Console.WriteLine("Discipline "); 
+        Console.WriteLine(discipline.Lname);
+        Console.WriteLine(discipline.Abbreviationn);
     }
 
     public static void Print(Pair pair)
     {
-        Console.WriteLine(pair);
-    }
+        Console.WriteLine("Pair");
+        Console.WriteLine(pair.PairStart);
+        Console.WriteLine(pair.PairEnd);
+        Console.WriteLine(pair.BreakStart);
+        Console.WriteLine(pair.BreakEnd);
+        Print(pair.ShiftLink);
 
+    }
+    public static void Print(Shift shift)
+    {
+        Console.WriteLine(shift);
+    }
     public static void Print(Employee employee)
     {
         Console.WriteLine(employee);
     }
-
-
     public static void Print(Group group)
     {
         Console.WriteLine("Group");
@@ -86,6 +110,27 @@ internal static class UI
     public static void Print(Teacher teacher)
     {
         Console.WriteLine(teacher);
-
     }
+
+    public static void Print(Organization organization)
+    {
+        Console.WriteLine(organization);
+    }
+    public static void Print(Corpus corpus)
+    {
+        Console.WriteLine("Corpus");
+        Console.WriteLine(corpus.Title);
+        Console.WriteLine(corpus.Address);
+        Print(corpus.Commandant);
+        Print(corpus.Organization);
+    }
+
+    public static void Print(Competence competence)
+    {
+        Console.WriteLine(competence.Code);
+        Console.WriteLine(competence.Content);
+        Print(competence.Speciality);
+    }
+
 }
+

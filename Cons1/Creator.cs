@@ -8,8 +8,15 @@ using System.Xml.Linq;
 
 internal class ClassCreator
 {
+    public static СalendarAndThematicPlan CalendarAndThematicPlan()
+    {
+        Console.Write("Введите номер занятия: ");
+        int lessonNumber = Convert.ToInt32(Console.ReadLine() ?? "");
+        Console.Write("Введите количество часов: ");
+        int numberOfHours = Convert.ToInt32(Console.ReadLine() ?? "");
 
-
+        return new СalendarAndThematicPlan(lessonNumber, numberOfHours, Material(), Paragraph(), TypeOfLesson());
+    }
     public static Auditory Auditory()
     {
         Console.Write("Введите название: ");
@@ -23,30 +30,17 @@ internal class ClassCreator
 
     public static Student Student()
     {
-        Console.Write("Введите имя: ");
-        string name = Console.ReadLine() ?? "";
         Console.Write("Введите фамилию: ");
         string surname = Console.ReadLine() ?? "";
+        Console.Write("Введите имя: ");
+        string name = Console.ReadLine() ?? "";
         Console.Write("Введите отчество: ");
         string patronimyc = Console.ReadLine() ?? "";
-        Console.WriteLine("Введите дату рождения: ");
-        DateTime date = CreateDateTime();
-
-        return new Student(name,surname, patronimyc, Group(), date);
+        DateOnly dateOfBirth;
+        Console.WriteLine("Введите дату рождения в формате дд.мм.гггг");
+        while (!DateOnly.TryParse(Console.ReadLine(), out dateOfBirth)) ;
+        return new Student(name, surname, patronimyc, Group(), dateOfBirth);
     }
-
-    static DateTime CreateDateTime()
-    {
-        Console.Write("Введите год: ");
-        _ = int.TryParse(Console.ReadLine(), out int year);
-        Console.Write("Введите месяц: ");
-        _ = int.TryParse(Console.ReadLine(), out int month);
-        Console.Write("Введите день: ");
-        _ = int.TryParse(Console.ReadLine(), out int day);
-
-        return new DateTime(year, month, day);
-    }
-
     public static Lesson Lesson()
     {
         return new Lesson(
@@ -58,8 +52,12 @@ internal class ClassCreator
             Auditory(),
             DateTime.Now);
     }
+    public static Paragraph Paragraph()
+    {
+        return new Paragraph();
+    }
+    
     public static TypeOfLesson TypeOfLesson()
-
     {
         return new TypeOfLesson();
     }
@@ -76,7 +74,11 @@ internal class ClassCreator
 
     public static Discipline Discipline()
     {
-        return new Discipline();
+        Console.Write("Введите название дисциплины: "); 
+        string lname = Console.ReadLine() ?? "";
+        Console.Write("Введите сокращенное название дисциплины: "); 
+        string abbreviationn = Console.ReadLine() ?? "";
+        return new Discipline(lname, abbreviationn);
     }
 
     public static Employee Employee()
@@ -89,42 +91,96 @@ internal class ClassCreator
         return new Equipment();
     }
 
-
-    public static Pair Pair()
-    {
-        return new Pair();
-    }
     public static Group Group()
     {
-            Console.Write("Введите название группы: ");
-            string name = Console.ReadLine() ?? "";
-            Console.Write("Введите сокращённое название группы: ");
-            string sokr = Console.ReadLine() ?? "";
-            Console.Write("Введите численность группы: ");
-            byte population = Convert.ToByte(Console.ReadLine() ?? "25");
-            Console.Write("Введите год поступления группы: ");
-            ushort year = Convert.ToUInt16(Console.ReadLine());
-
-            return new Group(name, sokr, population, year, Speciality(), Teacher());
+        Console.Write("Введите название группы: ");
+        string name = Console.ReadLine() ?? "";
+        Console.Write("Введите сокращённое название группы: ");
+        string sokr = Console.ReadLine() ?? "";
+        Console.Write("Введите численность группы: ");
+        byte population = Convert.ToByte(Console.ReadLine() ?? "25");
+        Console.Write("Введите год поступления группы: ");
+        ushort year = Convert.ToUInt16(Console.ReadLine());
+        
+        return new Group(name, sokr, population, year, Speciality(), Teacher());
         
     }
 
+    public static Competence Competence()
+    {
+        Console.WriteLine("Введите код: ");
+        string code = Console.ReadLine() ?? "";
+        Console.WriteLine("Введите содержание: ");
+        string content = Console.ReadLine() ?? "";
+        return new Competence(code, content, Speciality());
+
+    }
+
+    public static Shift Shift()
+    {
+        return new Shift();
+    }
     public static Teacher Teacher()
     {
         return new Teacher();
     }
 
-        
-
-
-        public static Speciality Speciality()
-        {
-            Console.Write("Введите название специальности: ");
-            string name = Console.ReadLine() ?? "";
-            Console.Write("Введите сокращенное название специальноти: ");
-            string reduction = Console.ReadLine() ?? "";
-            return new Speciality(name, reduction);
-
+    public static Speciality Speciality()
+    {
+        Console.Write("Введите название специальности: ");
+        string name = Console.ReadLine() ?? "";
+        Console.Write("Введите сокращенное название специальноти: ");
+        string reduction = Console.ReadLine() ?? "";
+        return new Speciality(name, reduction);
     }
- } 
+    public static Pair Pair()
+    {
+        TimeOnly pairStart, pairEnd, breakStart, breakEnd;
 
+        Console.WriteLine("Введите время начала пары: "); string input = Console.ReadLine() ?? "";
+        if (input != "") pairStart = TimeOnly.Parse(input);
+        else
+        {
+            while (input == "") { Console.WriteLine("Введите время начала пары: "); input = Console.ReadLine() ?? ""; }
+            pairStart = TimeOnly.Parse(input);
+        }
+        
+        Console.WriteLine("Введите время окончания пары: "); input = Console.ReadLine() ?? "";
+        if (input != "") pairEnd = TimeOnly.Parse(input);
+        else
+        {
+            while (input == "") { Console.WriteLine("Введите время окончания пары: "); input = Console.ReadLine() ?? ""; }
+            pairEnd = TimeOnly.Parse(input);
+        }
+
+        Console.WriteLine("Введите время начала перерыва: "); input = Console.ReadLine() ?? "";
+        if (input != "") breakStart = TimeOnly.Parse(input);
+        else
+        {
+            while (input == "") { Console.WriteLine("Введите время начала перерыва: "); input = Console.ReadLine() ?? ""; }
+            breakStart = TimeOnly.Parse(input);
+        }
+
+        Console.WriteLine("Введите время окончания перерыва: "); input = Console.ReadLine() ?? "";
+        if (input != "") breakEnd = TimeOnly.Parse(input);
+        else
+        {
+            while (input == "") { Console.WriteLine("Введите время окончания перерыва: "); input = Console.ReadLine() ?? ""; }
+            breakEnd = TimeOnly.Parse(input);
+        }
+        
+        return new Pair(pairStart, pairEnd, breakStart, breakEnd, Shift());
+    }
+    public static Organization Organization()
+    {
+        return new Organization();
+    }
+    public static Corpus Corpus()
+    {
+        Console.Write("Введите название: ");
+        string name = Console.ReadLine() ?? "";
+        Console.Write("Введите адрес: ");
+        string address = Console.ReadLine() ?? "";
+        return new Corpus(name, address, Employee(), Organization());
+    }
+}

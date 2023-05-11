@@ -8,6 +8,9 @@ while (true)
         switch (Console.ReadLine())
         {
 
+            case "СalendarAndThematicPlan":
+                UI.Print(ClassCreator.CalendarAndThematicPlan());
+                break;
             case "Auditory":
                 UI.Print(ClassCreator.Auditory());
                 break;
@@ -20,11 +23,23 @@ while (true)
             case "Group":
                 UI.Print(ClassCreator.Group());
                 break;
+            case "Discipline":
+                UI.Print(ClassCreator.Discipline());
+                break;
             case "Material":
                 UI.Print(ClassCreator.Material());
                 break;
             case "Speciality":
                 UI.Print(ClassCreator.Speciality());
+                break;
+            case "Pair":
+                UI.Print(ClassCreator.Pair());
+                break;
+            case "Corpus":
+                UI.Print(ClassCreator.Corpus());
+                break;
+            case "Competence":
+                UI.Print(ClassCreator.Competence());
                 break;
             default:
                 Console.WriteLine("Такого класса не существует");
