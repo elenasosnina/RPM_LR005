@@ -17,7 +17,15 @@ internal class ClassCreator
         byte places = Convert.ToByte(Console.ReadLine() ?? "");
         Console.Write("Введите кол-во окон: ");
         byte window = Convert.ToByte(Console.ReadLine() ?? "");
-        return new Auditory(name, Employee(), places, window, Equipment());
+        Console.Write("Введите кол-во оборудования: ");
+        byte cont = Convert.ToByte(Console.ReadLine() ?? "");
+        List<Equipment> equipmentList = new();
+        for (int i = 0; i < cont; i++)
+        {
+            Equipment equipment = Equipment();
+            equipmentList.Add(equipment);
+        }
+        return new Auditory(name, Employee(), places, window, equipmentList);
     }
 
     public static Student Student()
@@ -71,15 +79,16 @@ internal class ClassCreator
         return new Employee();
     }
 
-
-    public static List<Equipment> Equipment()
+    public static Equipment Equipment()
     {
-        return new List<Equipment>();
+        return new Equipment();
     }
+
     public static Pair Pair()
     {
         return new Pair();
     }
+
     public static Group Group()
     {
         Console.Write("Введите название группы: ");

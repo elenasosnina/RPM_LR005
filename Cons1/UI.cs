@@ -14,7 +14,7 @@ internal static class UI
         Console.WriteLine(auditory.Places);
         Console.WriteLine(auditory.Window);
         Print(auditory.Employee);
-        Print(auditory.Equipment);
+        PrintEquipmentList(auditory.EquipmentList);
     }
     public static void Print(Employee employee)
     {
@@ -30,7 +30,7 @@ internal static class UI
         Print(student.Group);
     }
 
-    public static void Print(List<Equipment> equipment)
+    public static void Print(Equipment equipment)
     {
         Console.WriteLine(equipment);
     }
@@ -77,6 +77,13 @@ internal static class UI
     {
         Console.WriteLine(teacher);
 
+    }
+    public static void PrintEquipmentList(List<Equipment> equipmentList)
+    {
+        foreach (Equipment equipment in equipmentList)
+        {
+            Console.WriteLine(equipment);
+        }
     }
 }
 
